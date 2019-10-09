@@ -1,0 +1,80 @@
+unit untSemaforo;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TForm1 = class(TForm)
+    spVerde: TShape;
+    spAmarelo: TShape;
+    spVermelho: TShape;
+    btnAcVerde: TButton;
+    btnAcAmarelo: TButton;
+    btnAcVermelho: TButton;
+    Timer1: TTimer;
+    procedure btnAcVerdeClick(Sender: TObject);
+    procedure btnAcAmareloClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
+   
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnAcAmareloClick(Sender: TObject);
+begin
+  spVerde.Brush.Color := clBtnFace;
+  spAmarelo.Brush.Color := clYellow;
+  spVermelho.Brush.Color := clBtnFace;
+end;
+
+procedure TForm1.btnAcVerdeClick(Sender: TObject);
+begin
+  spVerde.Brush.Color := clGreen;
+  spAmarelo.Brush.Color := clBtnFace;
+  spVermelho.Brush.Color := clBtnFace;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  spVerde.Brush.Color := clBtnFace;
+  spAmarelo.Brush.Color := clBtnFace;
+  spVermelho.Brush.Color := clRed;
+end;
+
+procedure TForm1.Timer1Timer(Sender: TObject);
+begin
+  if spVermelho.visible = true then
+  begin
+    spVermelho.Brush.Color := clRed;
+    spVermelho.Visible := false;
+    spAmarelo.Visible  := true;
+    spVerde.Visible    := false;
+  end
+  else if spAmarelo.Visible = true then
+  begin
+    spVermelho.Visible := false;
+    spAmarelo.Visible  := false;
+    spVerde.Visible    := true;
+  end
+  else if spVerde.visible = true then
+  begin
+    spVermelho.Visible := true;
+    spAmarelo.Visible  := false;
+    spVerde.Visible    := false;
+end;
+end;
+
+end.

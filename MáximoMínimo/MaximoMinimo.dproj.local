@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/09/07 20:16:59.000.565,=C:\Users\Wagner\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/09/07 20:17:18.000.647,C:\Users\Wagner\Documents\Embarcadero\Studio\Projects\MáximoMínimo\untMaxMin.dfm=C:\Users\Wagner\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2018/09/07 20:17:18.000.647,C:\Users\Wagner\Documents\Embarcadero\Studio\Projects\MáximoMínimo\untMaxMin.pas=C:\Users\Wagner\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/09/07 20:17:23.000.727,C:\Users\Wagner\Documents\Embarcadero\Studio\Projects\MáximoMínimo\MaximoMinimo.dproj=C:\Users\Wagner\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,33 @@
+unit untCalculadora;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TfrmCalculadora = class(TForm)
+    edtNum1: TEdit;
+    edtNum2: TEdit;
+    lblValor1: TLabel;
+    lblValor2: TLabel;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    BitBtn3: TBitBtn;
+    BitBtn4: TBitBtn;
+    Panel1: TPanel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCalculadora: TfrmCalculadora;
+
+implementation
+
+{$R *.dfm}
+
+end.

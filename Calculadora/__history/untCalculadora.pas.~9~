@@ -1,0 +1,58 @@
+unit untCalculadora;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TfrmCalculadora = class(TForm)
+    edtNum1: TEdit;
+    edtNum2: TEdit;
+    lblValor1: TLabel;
+    lblValor2: TLabel;
+    btnMais: TBitBtn;
+    btnMenos: TBitBtn;
+    btnMult: TBitBtn;
+    btnDivide: TBitBtn;
+    pnlResultado: TPanel;
+    procedure btnMaisClick(Sender: TObject);
+    procedure btnMenosClick(Sender: TObject);
+    procedure btnMultClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCalculadora: TfrmCalculadora;
+  num1, num2 : real;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCalculadora.btnMaisClick(Sender: TObject);
+begin
+  num1 := StrToFloat(edtNum1.Text);
+  num2 := StrToFloat(edtNum2.Text);
+  pnlResultado.Caption := floattostr(num1 + num2);
+end;
+
+procedure TfrmCalculadora.btnMenosClick(Sender: TObject);
+begin
+  num1 := StrToFloat(edtNum1.Text);
+  num2 := StrToFloat(edtNum2.Text);
+  pnlResultado.Caption := floattostr(num1 - num2);
+end;
+
+procedure TfrmCalculadora.btnMultClick(Sender: TObject);
+begin
+  num1 := StrToFloat(edtNum1.Text);
+  num2 := StrToFloat(edtNum2.Text);
+  pnlResultado.Caption := floattostr(num1 * num2);
+end;
+
+end.

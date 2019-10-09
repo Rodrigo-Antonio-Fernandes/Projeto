@@ -1,0 +1,128 @@
+unit untMaxMin;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    lblValor1: TLabel;
+    lblValor2: TLabel;
+    edtValor1: TEdit;
+    edtValor2: TEdit;
+    lblValor3: TLabel;
+    edtValor3: TEdit;
+    mmMostra: TMemo;
+    btnTestar: TButton;
+    btnLimpar: TButton;
+    procedure edtValor1KeyPress(Sender: TObject; var Key: Char);
+    procedure edtValor2KeyPress(Sender: TObject; var Key: Char);
+    procedure edtValor3KeyPress(Sender: TObject; var Key: Char);
+    procedure btnTestarClick(Sender: TObject);
+    procedure btnLimparClick(Sender: TObject);
+    procedure ValidaCampos;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnLimparClick(Sender: TObject);
+var
+  i : Integer;
+  begin
+    for i := 0 to Form1.ComponentCount - 1 do
+      if Form1.Components[i] is TCustomEdit then
+        (Form1.Components[i] as TCustomEdit).Clear;
+  end;
+
+
+procedure TForm1.btnTestarClick(Sender: TObject);
+var
+  valor1, valor2, valor3, maior, menor : real;
+begin
+  mmMostra.Text := '';
+  try
+    valor1 := StrToFloat(edtValor1.Text);
+    valor2 := StrToFloat(edtValor2.Text);
+    valor3 := StrToFloat(edtValor3.Text);
+
+      if (valor1 >= valor2) and (valor2 >= valor3) then
+       begin
+          maior := valor1;
+          menor := valor3;
+        end
+      else
+      if (valor2 >= valor1) and (valor3 >= valor2) then
+          begin
+            maior := valor3;
+            menor := valor1;
+          end
+      else
+      if (valor3 >= valor1) and (valor1 >= valor2) then
+      begin
+        maior := valor3;
+        menor := valor2;
+      end
+      else
+      begin
+        maior := valor2;
+        menor := valor3;
+      end;
+  except
+    if (edtValor1.Text = '') or (edtValor2.Text = '') or (edtValor3.Text = '') then
+    begin
+      mmMostra.Text := 'Este campo não pode ser vazio';
+    end;
+
+  end;
+
+  mmMostra.Lines.Clear;
+  mmMostra.Lines.Add('Resultados');
+  mmMostra.Lines.Add('O maior valor é '+FloatToStr(maior));
+  mmMostra.Lines.Add('O menor valor é '+FloatToStr(menor));
+end;
+
+procedure TForm1.edtValor1KeyPress(Sender: TObject; var Key: Char);
+begin
+  if ((key in ['0'..'9'] = false) and (word(key) <> vk_back)) then
+  key := #0;
+end;
+
+procedure TForm1.edtValor2KeyPress(Sender: TObject; var Key: Char);
+begin
+  if ((key in ['0'..'9'] = false) and (word(key) <> vk_back)) then
+  key := #0;
+end;
+
+procedure TForm1.edtValor3KeyPress(Sender: TObject; var Key: Char);
+begin
+  if ((key in ['0'..'9'] = false) and (word(key) <> vk_back)) then
+  key := #0;
+end;
+
+
+procedure TForm1.ValidaCampos;
+var
+  I : Integer;
+  begin
+    if Components[I].ClassType = TCustomEdit then
+      if (TCustomEdit(Components[I]).Text = '') then
+      begin
+        TCustomEdit(Components[I]).TextHint := 'Campo Obrigatório';
+        TCustomEdit(Components[I]).SetFocus;
+        Exit;
+      end;
+
+  end;
+
+end.
