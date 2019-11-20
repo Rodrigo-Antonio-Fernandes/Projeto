@@ -1,0 +1,67 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 243
+  ClientWidth = 472
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object MainMenu1: TMainMenu
+    Left = 8
+    object Cadastro1: TMenuItem
+      Caption = 'Cadastro'
+      object Clientes1: TMenuItem
+        Caption = 'Clientes'
+      end
+      object Filtrar1: TMenuItem
+        Caption = 'Filtrar'
+        object ClientesAtivos1: TMenuItem
+          Caption = 'Clientes Ativos'
+        end
+        object ClientesInativos1: TMenuItem
+          Caption = 'Clientes Inativos'
+        end
+        object ClientesemGeral1: TMenuItem
+          Caption = 'Clientes em Geral'
+        end
+      end
+    end
+    object Aplicaest1: TMenuItem
+      Caption = 'Aplica'#231#245'es'
+      object Cal1: TMenuItem
+        Caption = 'Calculadora'
+        OnClick = Cal1Click
+      end
+      object Nvegador1: TMenuItem
+        Caption = 'Navegador'
+        OnClick = Nvegador1Click
+      end
+    end
+    object Ultilitarios1: TMenuItem
+      Caption = 'Ultilitarios'
+      object abuada1: TMenuItem
+        Caption = 'Tabuada'
+        OnClick = abuada1Click
+      end
+      object Calendario1: TMenuItem
+        Caption = 'Calendario'
+        OnClick = Calendario1Click
+      end
+      object Semforo1: TMenuItem
+        Caption = 'Sem'#225'foro'
+        OnClick = Semforo1Click
+      end
+    end
+    object Sair1: TMenuItem
+      Caption = 'Sair'
+    end
+  end
+end

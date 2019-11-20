@@ -1,0 +1,89 @@
+unit unitsema;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm4 = class(TForm)
+    verde1: TShape;
+    amarelo1: TShape;
+    vermelho1: TShape;
+    Shape4: TShape;
+    Button1: TButton;
+    btnapa: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Button5: TButton;
+    procedure btnapaClick(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm4.btnapaClick(Sender: TObject);
+begin
+amarelo1.brush.color:=clolive;
+verde1.brush.Color:=clgreen;
+vermelho1.Brush.Color:=clmaroon;
+verde1.enabled:=false;
+amarelo1.enabled:=false;
+vermelho1.enabled:=false;
+end;
+
+procedure TForm4.Button1Click(Sender: TObject);
+begin
+amarelo1.brush.color:=clolive;
+verde1.brush.Color:=cllime;
+vermelho1.Brush.Color:=clmaroon;
+verde1.enabled:=true;
+amarelo1.enabled:=false;
+vermelho1.enabled:=false;
+end;
+
+procedure TForm4.Button3Click(Sender: TObject);
+begin
+amarelo1.brush.color:=clyellow;
+verde1.brush.Color:=clgreen;
+vermelho1.Brush.Color:=clmaroon;
+verde1.enabled:=false;
+amarelo1.enabled:=true;
+vermelho1.enabled:=false;
+end;
+
+procedure TForm4.Button4Click(Sender: TObject);
+begin
+amarelo1.brush.color:=clyellow;
+verde1.brush.Color:=cllime;
+vermelho1.Brush.Color:=clred;
+verde1.enabled:=true;
+amarelo1.enabled:=true;
+vermelho1.enabled:=true;
+
+end;
+
+procedure TForm4.Button5Click(Sender: TObject);
+begin
+amarelo1.brush.color:=clolive;
+verde1.brush.Color:=clgreen;
+vermelho1.Brush.Color:=clred;
+verde1.enabled:=false;
+amarelo1.enabled:=false;
+vermelho1.enabled:=true;
+end;
+
+end.

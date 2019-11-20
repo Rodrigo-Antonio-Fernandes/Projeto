@@ -1,0 +1,18 @@
+program projectgordo;
+
+uses
+  Vcl.Forms,
+  unitgordo in 'unitgordo.pas' {Form2},
+  untVezes in 'untVezes.pas' {Form1},
+  Pronto in 'Pronto.pas' {Form3},
+  unitsema in 'unitsema.pas' {Form4},
+  untPercentual in 'untPercentual.pas' {a};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.
