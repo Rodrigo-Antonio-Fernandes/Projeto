@@ -1,0 +1,9 @@
+C:\Users\Aluno-Lab2E1\Desktop\Rodrigo\Rodrigo\obj\Debug\Rodrigo.csprojAssemblyReference.cache
+C:\Users\Aluno-Lab2E1\Desktop\Rodrigo\Rodrigo\obj\Debug\Rodrigo.Form1.resources
+C:\Users\Aluno-Lab2E1\Desktop\Rodrigo\Rodrigo\obj\Debug\Rodrigo.Properties.Resources.resources
+C:\Users\Aluno-Lab2E1\Desktop\Rodrigo\Rodrigo\obj\Debug\Rodrigo.csproj.GenerateResource.cache
+C:\Users\Aluno-Lab2E1\Desktop\Rodrigo\Rodrigo\bin\Debug\Rodrigo.exe.config
+C:\Users\Aluno-Lab2E1\Desktop\Rodrigo\Rodrigo\bin\Debug\Rodrigo.exe
+C:\Users\Aluno-Lab2E1\Desktop\Rodrigo\Rodrigo\bin\Debug\Rodrigo.pdb
+C:\Users\Aluno-Lab2E1\Desktop\Rodrigo\Rodrigo\obj\Debug\Rodrigo.exe
+C:\Users\Aluno-Lab2E1\Desktop\Rodrigo\Rodrigo\obj\Debug\Rodrigo.pdb
